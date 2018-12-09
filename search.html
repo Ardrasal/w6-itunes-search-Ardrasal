@@ -1,19 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+    <link rel="stylesheet" href="iTunes.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
     <script src="iTunes_search.js" defer></script>
     <title>iTunes Search</title>
 </head>
+
 <body>
-    <h1>Music Search</h1>
-    <div>
-        <input type="text" id="search-field" placeholder="Search iTunes">
-        <button id="search-button">Search</button>
-    </div>
-    <div id="search-results"></div>
+    <article class="mw7 center ph3 ph5-ns tc br2 pv5 bg-washed-green dark-green mb5">
+        <h1 class="fw6 f3 f2-ns lh-title mt0 mb3">
+            You like music? Find it here.
+        </h1>
+            <h2 class="fw2 f4 lh-copy mt0 mb3">
+                  Removing roadblocks to the music you want now.
+            </h2>
+                <p class="fw1 f5 mt0 mb3">
+                  Go on, no one's stopping you.
+                </p>
+                <div>
+                    <input type="text" id="search-field" placeholder="Search iTunes">
+                <div>
+                  <a class="f6 br-pill bg-dark-green no-underline washed-green ba b--dark-green grow pv2 ph3 dib mr3" id="search-button"
+                    href="#">
+                    Search
+                  </a>
+                <div id="search-results" class="fl w-20"></div>
+                </div>
+    </article>
 </body>
 </html>
