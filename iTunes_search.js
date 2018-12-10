@@ -1,18 +1,4 @@
-// const searchButton = document.getElementById('search-button')
-// const searchField = document.getElementById('search-field')
-// const searchLanguage = document.getElementById('search-language')
-
-// searchButton.addEventListener('click', function (event)) {
-//     let query = searchField.Value
-//     let language = searchLanguage.Value
-    
-//     if (language) {
-//         query += ' language:${language}'
-//     }
-
-//     $.get(https://itunes.apple.com/search?parameterkeyvalue)
-// }
-
+/* global $, jQuery */
 
 $('#search-button').on('click', runSearch)
 $('#search-field').on('keyup', function (event) {
@@ -42,14 +28,16 @@ function runSearch () {
             .empty()
             .append(
                 $('<p>')
-                    .text(`Total count: ${results.resultCount}`)
+                    .text(`Your search has turned up: ${results.resultCount} results`)
         )
+        
         .append(results.results.map(searchHtml))
     })
 }
 
 function searchHtml (search) {
     return `
-        <p><a href="${search.html_url}">${search.artistName}</a> - ${search.collectionName || 'no description'}</p>
+        <p><a href="${search.html_url}">${search.artistName}</a> - ${search.trackName} - ${search.collectionName || 'no description'}
+        <img src="${search.artworkUrl100}"</p>
         `
 }
