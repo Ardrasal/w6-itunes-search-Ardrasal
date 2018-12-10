@@ -38,6 +38,9 @@ function runSearch () {
 function searchHtml (search) {
     return `
         <p><a href="${search.html_url}">${search.artistName}</a> - ${search.trackName} - ${search.collectionName || 'no description'}
-        <img src="${search.artworkUrl100}"</p>
+        <img src="${search.artworkUrl100}">
+        <audio src="${search.previewUrl}" controls=""></audio></p>
         `
 }
+
+// document.createElement("output");
